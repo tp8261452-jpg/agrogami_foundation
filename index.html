@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>অগ্রগামী ফাউন্ডেশন</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f5fff8;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+color:#fff !important;
+font-size:28px;
+font-weight:bold;
+}
+
+.nav-link{
+color:white !important;
+margin-left:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-link:hover{
+color:#00ff99 !important;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero img{
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid white;
+background:white;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:65px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:22px;
+margin-top:10px;
+}
+
+.hero .btn{
+padding:12px 35px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+margin-top:20px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:42px;
+font-weight:bold;
+color:#0b7a43;
+}
+
+.section-title p{
+color:#666;
+}
+
+/* ABOUT */
+
+.about-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+line-height:1.9;
+}
+
+/* TEAM */
+
+.team-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+height:100%;
+}
+
+.team-card:hover{
+transform:translateY(-10px);
+}
+
+.team-card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.team-content{
+padding:20px;
+text-align:center;
+}
+
+.team-content h4{
+font-size:22px;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.team-content h6{
+color:#0b7a43;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.team-content p{
+font-size:14px;
+color:#666;
+}
+
+/* EVENT */
+
+.event-box{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:0.4s;
+height:100%;
+}
+
+.event-box:hover{
+transform:translateY(-10px);
+}
+
+.event-box i{
+font-size:55px;
+color:#0b7a43;
+margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FORM */
+
+.form-section{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-control{
+padding:14px;
+border-radius:10px;
+}
+
+.btn-success{
+padding:12px 30px;
+border-radius:30px;
+font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact-box{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.contact-box p{
+margin-top:15px;
+font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:40px 0;
+text-align:center;
+}
+
+.social-icons a{
+color:white;
+font-size:22px;
+margin:10px;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+color:#00ff99;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title h2{
+font-size:30px;
+}
+
+.hero img{
+width:100px;
+height:100px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<img src="https://i.postimg.cc/LsQLvLzk/file.jpg" width="40">
+অগ্রগামী ফাউন্ডেশন
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#team">Team Members</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#event">Our Events</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div data-aos="zoom-in">
+
+<img src="https://i.postimg.cc/LsQLvLzk/file.jpg">
+
+<h1>অগ্রগামী ফাউন্ডেশন</h1>
+
+<p>মানবতার সেবায় একসাথে এগিয়ে চলি</p>
+
+<a href="#registration" class="btn btn-success">
+Join Now
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="py-5" id="about">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+<h2>About Us</h2>
+<p>আমাদের ফাউন্ডেশন সম্পর্কে</p>
+</div>
+
+<div class="about-box" data-aos="fade-up">
+
+<p>
+অগ্রগামী ফাউন্ডেশন একটি মানবিক ও সামাজিক সংগঠন। আমাদের মূল লক্ষ্য হলো সমাজের অসহায় ও সুবিধাবঞ্চিত মানুষের পাশে দাঁড়ানো, শিক্ষা সহায়তা প্রদান, সামাজিক সচেতনতা বৃদ্ধি এবং তরুণদের ইতিবাচক কাজে উৎসাহিত করা।
+</p>
+
+<br>
+
+<p>
+আমরা বিশ্বাস করি একসাথে কাজ করলে সমাজ পরিবর্তন সম্ভব। তাই আমাদের প্রতিটি সদস্য মানুষের কল্যাণে কাজ করে যাচ্ছে।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="py-5 bg-light" id="team">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Our Team Members</h2>
+
+<p>আমাদের ১২ জন সম্মানিত সদস্য</p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- 1 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/C19QDC3d/IMG-20260519-WA0004.jpg">
+<div class="team-content">
+<h4>Md. Muntasir Lais</h4>
+<h6>Founder / প্রতিষ্ঠাতা</h6>
+<p>Foundation এর মূল প্রতিষ্ঠাতা ও সমাজসেবক।</p>
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/bN0qydnN/Whats-App-Image-2026-05-20-at-9-32-14-PM.jpg">
+<div class="team-content">
+<h4>Nahid Hasan Jiyem</h4>
+<h6>Co-Founder / সহ-প্রতিষ্ঠাতা</h6>
+<p>Foundation পরিচালনায় গুরুত্বপূর্ণ ভূমিকা পালন করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/3xjnNQ86/Whats-App-Image-2026-05-20-at-9-25-01-PM.jpg">
+<div class="team-content">
+<h4>Md. Humayun Kabir</h4>
+<h6>Chairman / চেয়ারম্যান</h6>
+<p>সংগঠনের সার্বিক তত্ত্বাবধান করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/vBZ9GpDw/joy-vai.jpg">
+<div class="team-content">
+<h4>Naimul Hasan Joy</h4>
+<h6>President / সভাপতি</h6>
+<p>Foundation এর নেতৃত্ব প্রদান করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/P5LdnKd6/sujon-vai-(1).jpg">
+<div class="team-content">
+<h4>Md. Khaled Masud Sujon</h4>
+<h6>Vice President / সহ-সভাপতি</h6>
+<p>সকল কার্যক্রমে সহায়তা প্রদান করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/cL78ws82/murad.jpg">
+<div class="team-content">
+<h4>Murad Hasan Moon</h4>
+<h6>General Secretary</h6>
+<p>Foundation এর প্রশাসনিক দায়িত্ব পালন করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/nr5qR0Hd/forhad.jpg">
+<div class="team-content">
+<h4>Forhad Hasan</h4>
+<h6>Joint Secretary</h6>
+<p>সাংগঠনিক কাজে সক্রিয়ভাবে কাজ করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/qgVxBj97/image-1778931013101.jpg">
+<div class="team-content">
+<h4>Md. Muntasir Lais</h4>
+<h6>Treasurer / কোষাধ্যক্ষ</h6>
+<p>Foundation এর অর্থনৈতিক কার্যক্রম পরিচালনা করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/SNJr6zS4/aktarul.jpg">
+<div class="team-content">
+<h4>Md. Aktarul Islam</h4>
+<h6>Chief Volunteer</h6>
+<p>স্বেচ্ছাসেবক দলের নেতৃত্ব প্রদান করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/L4V7CfFm/Whats-App-Image-2026-05-20-at-9-02-15-PM.jpg">
+<div class="team-content">
+<h4>Md. Robiul Alom</h4>
+<h6>Senior Volunteer</h6>
+<p>সামাজিক কার্যক্রমে গুরুত্বপূর্ণ ভূমিকা পালন করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 11 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/FHKVrd6T/saddam.jpg">
+<div class="team-content">
+<h4>Md. Saddam Ali</h4>
+<h6>Volunteer Field</h6>
+<p>মাঠ পর্যায়ে বিভিন্ন কার্যক্রম পরিচালনা করেন।</p>
+</div>
+</div>
+</div>
+
+<!-- 12 -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+<div class="team-card">
+<img src="https://i.postimg.cc/Y9QcqyPj/Whats-App-Image-2026-05-20-at-9-00-51-PM.jpg">
+<div class="team-content">
+<h4>Md. Mahamud Hasan</h4>
+<h6>Event Manager</h6>
+<p>Foundation এর সকল event পরিচালনা করেন।</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section class="py-5" id="event">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Our Events</h2>
+
+<p>আমাদের কার্যক্রম ও ইভেন্টসমূহ</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="event-box" data-aos="fade-up">
+<i class="fa-solid fa-hand-holding-heart"></i>
+<h4>Food Distribution</h4>
+<p>অসহায় মানুষের মাঝে খাদ্য বিতরণ কার্যক্রম।</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="event-box" data-aos="fade-up">
+<i class="fa-solid fa-book-open"></i>
+<h4>Education Support</h4>
+<p>গরীব শিক্ষার্থীদের শিক্ষা সহায়তা প্রদান।</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="event-box" data-aos="fade-up">
+<i class="fa-solid fa-users"></i>
+<h4>Social Awareness</h4>
+<p>সামাজিক সচেতনতামূলক বিভিন্ন আয়োজন।</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="py-5 bg-light" id="gallery">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Gallery</h2>
+
+<p>আমাদের কিছু মুহূর্ত</p>
+
+</div>
+
+<div class="row g-4 gallery">
+
+<div class="col-md-4">
+<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="col-md-4">
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="col-md-4">
+<img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REGISTRATION -->
+
+<section class="py-5" id="registration">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Registration Form</h2>
+
+<p>আমাদের সাথে যুক্ত হোন</p>
+
+</div>
+
+<div class="form-section" data-aos="fade-up">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+<input type="text" class="form-control" placeholder="আপনার নাম">
+</div>
+
+<div class="col-md-6 mb-3">
+<input type="email" class="form-control" placeholder="ইমেইল">
+</div>
+
+<div class="col-md-6 mb-3">
+<input type="text" class="form-control" placeholder="মোবাইল নাম্বার">
+</div>
+
+<div class="col-md-6 mb-3">
+<input type="text" class="form-control" placeholder="ঠিকানা">
+</div>
+
+<div class="col-12 mb-3">
+<textarea class="form-control" rows="5" placeholder="আপনার বার্তা"></textarea>
+</div>
+
+<div class="col-12 text-center">
+<button class="btn btn-success">
+Submit Registration
+</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="py-5 bg-light" id="contact">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Contact Us</h2>
+
+<p>যোগাযোগ করুন</p>
+
+</div>
+
+<div class="contact-box" data-aos="zoom-in">
+
+<h4>অগ্রগামী ফাউন্ডেশন</h4>
+
+<p>
+<i class="fa-solid fa-phone"></i>
+01735675839
+</p>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+foundationagrogami@gmail.com
+</p>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Belsara, Baliadangi, Thakurgaon, Bangladesh
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<h4>অগ্রগামী ফাউন্ডেশন</h4>
+
+<p>মানবতার সেবায় একসাথে এগিয়ে চলি</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+<div class="mt-4">
+
+<p>
+<i class="fa-solid fa-phone"></i>
+01735675839
+</p>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+foundationagrogami@gmail.com
+</p>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Belsara, Baliadangi, Thakurgaon, Bangladesh
+</p>
+
+</div>
+
+<p class="mt-3">
+© 2026 All Rights Reserved | অগ্রগামী ফাউন্ডেশন
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+
+</body>
+</html>
